@@ -1,0 +1,16 @@
+<div class="container">
+
+<h1 class="display-5">Edit <%= @artist.name %> information</h1>
+
+
+<%= simple_form_for @artist do |f| %>
+  <%= f.input :name, label: 'Enter Artist name', error: 'Username is mandatory, please specify one'  %>
+  <%= f.input :genre1 %>
+  <%= f.input :genre2 %>
+  <%= f.input :genre3 %>
+  <%= f.input :year %>
+  <%= f.input :collectif %>
+  <%= f.input :region %>
+  <%= f.button :submit %>
+<% end %>
+</div>
