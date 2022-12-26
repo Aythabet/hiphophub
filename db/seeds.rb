@@ -164,4 +164,17 @@ artist = Artist.create([{
 }
 ]);
 
+p("Creating Genres...")
+
+Genre.destroy_all
+Genre.create(name: 'Trap')
+Genre.create(name: 'Old School')
+Genre.create(name: 'Drill')
+Genre.create(name: 'Gangsta rap')
+Genre.create(name: 'Boom-bap')
+Genre.create(name: 'Country trap')
+Genre.create(name: 'Bounce')
+Genre.create(name: 'Mumble Rap')
+
+
 p("Database seeded!")

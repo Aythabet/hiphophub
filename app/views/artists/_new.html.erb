@@ -1,0 +1,10 @@
+<%= simple_form_for @artist do |f| %>
+  <%= f.input :name, label: 'Enter Artist name', error: 'Username is mandatory, please specify one'  %>
+  <%= f.input :genre1, label: 'Please select a genre', collection: Genre.all, label_method: :name, value_method: :id %>
+  <%= f.input :genre2, label: 'Please select another genre', collection: Genre.all, label_method: :name, value_method: :id %>
+  <%= f.input :genre3, label: 'Please select an extra genre', collection: Genre.all, label_method: :name, value_method: :id %>
+  <%= f.input :year %>
+  <%= f.input :collectif %>
+  <%= f.input :region %>
+  <%= f.button :submit %>
+<% end %>
