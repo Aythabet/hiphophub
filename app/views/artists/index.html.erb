@@ -1,0 +1,28 @@
+<h1>HipHopHub</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Region</th>
+      <th>Genre 1</th>
+      <th>Genre 2</th>
+      <th>Genre 3</th>
+      <th>Collectif</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%= artist.year %></td>
+        <td><%= artist.region %></td>
+        <td><%= artist.genre1 %></td>
+        <td><%= artist.genre2 %></td>
+        <td><%= artist.genre3 %></td>
+        <td><%= artist.collectif %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
