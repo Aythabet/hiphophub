@@ -6,6 +6,7 @@
   
   <%= raw "<br>" %>
   
+  <%= link_to_prev_page @artists, 'Prev Page' %> <%= link_to_next_page @artists, 'Next Page' %>
   <table class="table table-striped table-sm">
     <thead>
       <tr>
@@ -35,4 +36,6 @@
       <% end %>
     </tbody>
   </table>
+
+
 </div>
