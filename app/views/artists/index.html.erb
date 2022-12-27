@@ -1,6 +1,7 @@
 <div class="container">
+    <%= raw "<br>" %>
   <div class="header">
-    <%= link_to "New Artist", new_artist_path, class: "btn btn-primary"%>
+      <%= link_to "New Artist", new_artist_path, class: "btn btn-primary"%>
   </div>
   
   <%= raw "<br>" %>
@@ -21,18 +22,18 @@
       </tr>
     </thead>
     <tbody>
-      <% @artists.each do |artist| %>
-        <tr>
-          <td><%= artist.name %></td>
-          <td><%= artist.year %></td>
-          <td><%= artist.region %></td>
-          <td><%= artist.genre1 %></td>
-          <td><%= artist.genre2 %></td>
-          <td><%= artist.genre3 %></td>
-          <td><%= artist.collectif %></td>
-          <td><%= link_to "Edit", edit_artist_path(artist), class: "btn btn-secondary"%></td>
-        </tr>
-      <% end %>
+        <% @artists.each do |artist| %>
+          <tr>
+            <td><%= artist.name %></td>
+            <td><%= artist.year %></td>
+            <td><%= artist.region %></td>
+            <td><%= artist.genre1 %></td>
+            <td><%= artist.genre2 %></td>
+            <td><%= artist.genre3 %></td>
+            <td><%= artist.collectif %></td>
+            <td><%= link_to "Edit", edit_artist_path(artist), class: "btn btn-secondary"%></td>
+          </tr>
+        <% end %>
     </tbody>
   </table>
 

@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.order(created_at: :desc).page params[:page]
+    if params[:query].present?
+      @artists = Artist.where("name LIKE ?", "%#{params[:query]}%").page params[:page]
+    else
+      @artists = Artist.order(created_at: :desc).page params[:page]
+    end
   end
 
   def new
